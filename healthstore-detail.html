@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthStore Detail | Hellawati Ayu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Perbaikan inline agar badge tidak melebar ke kanan */
+        .detail-badge {
+            display: inline-block !important;
+            width: fit-content;
+            padding: 6px 16px;
+            background: rgba(13, 148, 136, 0.1); /* Health Teal */
+            color: #0d9488;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Standarisasi titik window mockup */
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        .window-dots .dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* Aksen warna khusus stats medical */
+        .medical-accent {
+            color: #0d9488 !important;
+        }
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="container detail-wrapper">
+
+        <!-- Navigation -->
+        <header class="detail-nav">
+            <a href="index.html#projects" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="breadcrumb">
+                Projects <i class="fa-solid fa-chevron-right" style="font-size:0.7rem; margin: 0 6px; color: var(--text-light);"></i> 
+                <span>HealthStore Marketplace</span>
+            </div>
+        </header>
+
+        <!-- Grid Konten (1.2fr 0.8fr) -->
+        <main class="detail-grid">
+
+            <!-- KIRI: Informasi Utama -->
+            <div class="detail-content-left">
+                <div class="detail-badge">E-Commerce Platform</div>
+
+                <h1 class="project-title-large">
+                    HealthStore <span>Digital Marketplace</span>
+                </h1>
+
+                <p class="project-long-desc">
+                    <strong>HealthStore</strong> is a specialized e-commerce platform designed to modernize the medical equipment supply chain in Indonesia. Built with a focus on <strong>robust inventory management</strong>, the system provides a seamless experience for purchasing medical tools, hospital furniture, and health supplements.
+                </p>
+
+                <!-- Stats Row -->
+                <div class="stats-row">
+                    <div class="stat-card-mini">
+                        <div class="s-icon medical-accent"><i class="fa-solid fa-basket-shopping"></i></div>
+                        <div class="s-info">
+                            <h4>40+</h4>
+                            <p>Global Brands</p>
+                        </div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="s-icon medical-accent"><i class="fa-solid fa-boxes-stacked"></i></div>
+                        <div class="s-info">
+                            <h4>Stock</h4>
+                            <p>Real-time Sync</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="action-row">
+                    <a href="https://github.com/hellaww/toko-kesehatan-online" target="_blank" class="btn-primary-action">
+                        <i class="fa-brands fa-github"></i> View Repository
+                    </a>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="tech-stack-section">
+                    <h3 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: var(--text-muted);">
+                        <i class="fa-solid fa-code"></i> Engineering Stack
+                    </h3>
+                    <div class="tech-pills-wrap">
+                        <span class="tech-tag">PHP / Laravel</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Eloquent ORM</span>
+                        <span class="tech-tag">Bootstrap 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANAN: Visual & Fitur -->
+            <div class="detail-content-right">
+
+                <!-- Window Mockup -->
+                <div class="window-mockup">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div style="font-size: 0.75rem; color: #9ca3af; margin-left: 15px; font-family: monospace;">healthstore.id</div>
+                    </div>
+                    <div class="window-body">
+                        <!-- CSS Anda otomatis menghandle scroll pada hover (350px) -->
+                        <img src="images/tokokesehatan.png" alt="HealthStore Preview" class="scroll-img">
+                    </div>
+                </div>
+
+                <!-- Features Highlight List -->
+                <div class="features-highlight-card">
+                    <h3>Marketplace Capabilities</h3>
+                    <ul class="features-ul">
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Smart Search:</strong> Advanced product filtering by category and brand.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Role Management:</strong> Separate portals for Customers and Administrators.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Stock Control:</strong> Automated stock deduction upon transaction completion.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.detail-wrapper');
+            wrapper.style.opacity = '1';
+            wrapper.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>

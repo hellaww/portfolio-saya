@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Detail | Hellawati Ayu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="detail-page">
+
+    <div class="container detail-container reveal">
+        <!-- Top Navigation (Back Button) -->
+        <div class="detail-nav">
+            <a href="index.html#projects" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="breadcrumbs">
+                <span>Projects</span> <i class="fa-solid fa-chevron-right"></i> <span>Internal Resource Management</span>
+            </div>
+        </div>
+
+        <div class="detail-grid">
+    <!-- SISI KIRI: INFO TEKS TEKNIS -->
+    <div class="detail-info">
+        <h1 class="detail-title">Enterprise System <br><span>Backend Engine</span></h1>
+        <div class="detail-line"></div>
+
+        <p class="detail-description">
+            Sistem ini dibangun secara kustom menggunakan <strong>Laravel Framework</strong> untuk mengelola alur kerja perusahaan yang kompleks. 
+            Fokus utama proyek ini adalah integrasi data antara <strong>MySQL database</strong> dengan sistem pelaporan otomatis dan mesin notifikasi email untuk meningkatkan efisiensi operasional di PT Semen Indonesia (Persero) Tbk.
+        </p>
+
+        <!-- Stats Box -->
+        <div class="detail-stats-group">
+            <div class="d-stat-card">
+                <div class="d-stat-icon"><i class="fa-solid fa-server"></i></div>
+                <div>
+                    <h4>Laravel</h4>
+                    <p>Core Framework</p>
+                </div>
+            </div>
+            <div class="d-stat-card">
+                <div class="d-stat-icon"><i class="fa-solid fa-database"></i></div>
+                <div>
+                    <h4>MySQL</h4>
+                    <p>Database Engine</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Action Buttons -->
+        <div class="detail-actions">
+            <a href="files/project-laravel.pdf" target="_blank" class="btn-primary-detail">
+                <i class="fa-solid fa-file-pdf"></i> Download Documentation
+            </a>
+        </div>
+
+        <!-- Technologies Used (Tanpa Bootstrap) -->
+        <div class="tech-used-section">
+            <h3><i class="fa-solid fa-microchip"></i> Stack & Libraries</h3>
+            <div class="tech-used-pills">
+                <span>Laravel 11</span>
+                <span>MySQL</span>
+                <span>DomPDF / Snappy</span>
+                <span>SMTP Mail Server</span>
+                <span>Custom CSS</span>
+                <span>Vanilla JavaScript</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SISI KANAN: FITUR UTAMA -->
+    <div class="detail-visual">
+        <div class="detail-image-wrapper">
+            <!-- Gunakan screenshot sistem/dashboard kamu -->
+            <img src="images/project-laravel.jpeg" alt="Sistem Dashboard">
+        </div>
+
+        <!-- Fokus pada Fitur yang Kamu Sebutkan -->
+        <div class="features-card">
+            <h3><i class="fa-solid fa-gears"></i> Core Functionalities</h3>
+            <ul class="features-list">
+                <li><span></span> <strong>Automated PDF Reporting:</strong> Menghasilkan dokumen laporan resmi secara dinamis langsung dari database.</li>
+                <li><span></span> <strong>Email Notification Engine:</strong> Sistem pengiriman email otomatis (SMTP) untuk alert dan persetujuan.</li>
+                <li><span></span> <strong>Relational Database:</strong> Arsitektur MySQL yang dioptimasi untuk integritas data enterprise.</li>
+                <li><span></span> <strong>Eloquent ORM Management:</strong> Pengelolaan data yang efisien dan aman dari SQL Injection.</li>
+                <li><span></span> <strong>Custom UI Components:</strong> Antarmuka unik yang dibangun dengan CSS murni tanpa library pihak ketiga.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <script>
+        // Simple reveal animation
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelector('.detail-container').style.opacity = '1';
+            document.querySelector('.detail-container').style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>

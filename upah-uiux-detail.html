@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UPAH UI/UX Detail | Hellawati Ayu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Tambahan kecil karena class ini belum ada di CSS utama Anda agar badge rapi */
+        .detail-badge {
+            display: inline-block;
+            padding: 6px 16px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="container detail-wrapper">
+
+        <!-- Navigation (Menggunakan class detail-nav Anda) -->
+        <header class="detail-nav">
+            <a href="index.html#projects" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="breadcrumb">
+                Projects <i class="fa-solid fa-chevron-right" style="font-size:0.7rem; margin: 0 8px; color: var(--text-light);"></i> 
+                <span>UPAH UMKM App</span>
+            </div>
+        </header>
+
+        <!-- Main Content (Menggunakan detail-grid: 1.2fr 0.8fr) -->
+        <main class="detail-grid">
+
+            <!-- KIRI: Text Content -->
+            <div class="detail-content-left">
+                <div class="detail-badge">UI/UX Case Study</div>
+
+                <h1 class="project-title-large">
+                    UPAH <span>UMKM Penduduk Sejahtera</span>
+                </h1>
+
+                <p class="project-long-desc">
+                    A mobile-based marketplace application prototype designed to support the digitalization of Micro, Small, and Medium Enterprises (UMKM). 
+                    Designed with a focus on seamless user experience for both sellers and buyers in a local ecosystem.
+                </p>
+
+                <!-- Stats Row (Menggunakan stat-card-mini Anda) -->
+                <div class="stats-row">
+                    <div class="stat-card-mini">
+                        <div class="s-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+                        <div class="s-info">
+                            <h4>20+</h4>
+                            <p>Screens</p>
+                        </div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="s-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                        <div class="s-info">
+                            <h4>Hi-Fi</h4>
+                            <p>Prototype</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Row (Menggunakan btn-primary-action Anda) -->
+                <div class="action-row">
+                    <a href="https://www.figma.com/proto/7PTj2OQHb79pjypq15azka/UPAH--UMKM-PENDUDUK-SEJAHTERA--PROJECT-IMK?page-id=0%3A1&node-id=40-61&p=f&viewport=1211%2C709%2C0.45&t=GmV3QB2vtmrP69mf-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=40%3A61" 
+                       target="_blank" class="btn-primary-action">
+                        <i class="fa-brands fa-figma"></i> Open Figma Prototype
+                    </a>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="tech-stack-section">
+                    <h3 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: var(--text-muted);">
+                        <i class="fa-solid fa-toolbox"></i> Design Tools
+                    </h3>
+                    <div class="tech-pills-wrap">
+                        <span class="tech-tag">Figma</span>
+                        <span class="tech-tag">Wireframing</span>
+                        <span class="tech-tag">Design System</span>
+                        <span class="tech-tag">Interactive Prototyping</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANAN: Mockup & Features -->
+            <div class="detail-content-right">
+                
+                <!-- Window Mockup (Menggunakan sistem hover-scroll dari CSS Anda) -->
+                <div class="window-mockup">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red" style="width: 10px; height: 10px; background: #ff5f56; border-radius: 50%; display: inline-block; margin-right: 5px;"></span>
+                            <span class="dot yellow" style="width: 10px; height: 10px; background: #ffbd2e; border-radius: 50%; display: inline-block; margin-right: 5px;"></span>
+                            <span class="dot green" style="width: 10px; height: 10px; background: #27c93f; border-radius: 50%; display: inline-block;"></span>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <!-- CSS Anda akan otomatis melakukan scroll pada gambar ini saat di-hover -->
+                        <img src="images/UPAH.png" alt="UPAH Showcase" class="scroll-img">
+                    </div>
+                </div>
+
+                <!-- Features Highlight (Menggunakan features-ul & dot-v Anda) -->
+                <div class="features-highlight-card">
+                    <h3>Core Ecosystem Features</h3>
+                    <ul class="features-ul">
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span>Marketplace Ecosystem</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span>QRIS Payment Integration</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span>Real-time Chat & Call Features</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.detail-wrapper');
+            wrapper.style.opacity = '1';
+            wrapper.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOVIA v2 Detail | Hellawati Ayu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Perbaikan inline agar badge tidak melebar ke kanan */
+        .detail-badge {
+            display: inline-block !important;
+            width: fit-content;
+            padding: 6px 16px;
+            background: var(--primary-light);
+            color: var(--primary);
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Memastikan window-dots berwarna sesuai standar */
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        .window-dots .dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="container detail-wrapper">
+
+        <!-- Navigation (Sesuai Struktur CSS Anda) -->
+        <header class="detail-nav">
+            <a href="index.html#projects" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="breadcrumb">
+                Projects <i class="fa-solid fa-chevron-right" style="font-size:0.7rem; margin: 0 6px; color: var(--text-light);"></i> 
+                <span>SOVIA v2</span>
+            </div>
+        </header>
+
+        <!-- Grid Konten (1.2fr 0.8fr) -->
+        <main class="detail-grid">
+
+            <!-- KIRI: Informasi Utama -->
+            <div class="detail-content-left">
+                <div class="detail-badge">Enterprise Solution</div>
+
+                <h1 class="project-title-large">
+                    SOVIA v2 <span>Official Website</span>
+                </h1>
+
+                <p class="project-long-desc">
+                    <strong>Study Overseas Internal Assistant (SOVIA) v2</strong> is the evolved version of SIG's scholarship automation. 
+                    Built with <strong>Laravel 11</strong>, this platform provides end-to-end control over postgraduate registration, replacing manual processes with a secure digital workflow.
+                </p>
+
+                <!-- Stats Row (Menggunakan stat-card-mini) -->
+                <div class="stats-row">
+                    <div class="stat-card-mini">
+                        <div class="s-icon"><i class="fa-solid fa-code"></i></div>
+                        <div class="s-info">
+                            <h4>06</h4>
+                            <p>Technologies</p>
+                        </div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="s-icon"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="s-info">
+                            <h4>08</h4>
+                            <p>Main Features</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="action-row">
+                    <a href="files/project-laravel.pdf" target="_blank" class="btn-primary-action">
+                        <i class="fa-solid fa-file-pdf"></i> View Case Study
+                    </a>
+                </div>
+
+                <!-- Tech Stack Tags -->
+                <div class="tech-stack-section">
+                    <h3 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: var(--text-muted);">
+                        <i class="fa-solid fa-microchip"></i> Technologies Used
+                    </h3>
+                    <div class="tech-pills-wrap">
+                        <span class="tech-tag">Laravel 11</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">PDF Engine</span>
+                        <span class="tech-tag">SMTP Email</span>
+                        <span class="tech-tag">Vanilla JS</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANAN: Visual & Fitur -->
+            <div class="detail-content-right">
+
+                <!-- Window Mockup (Efek hover scroll otomatis 350px) -->
+                <div class="window-mockup">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <img src="images/project-laravel.jpeg" alt="SOVIA Preview" class="scroll-img">
+                    </div>
+                </div>
+
+                <!-- Features Highlight List -->
+                <div class="features-highlight-card">
+                    <h3>Key Functionalities</h3>
+                    <ul class="features-ul">
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span>Automated PDF Generation</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span>Real-time Email Notifications</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span>Role-based Admin Access</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.detail-wrapper');
+            wrapper.style.opacity = '1';
+            wrapper.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLN Invoice System Detail | Hellawati Ayu</title>
+    <!-- Font Plus Jakarta Sans -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Perbaikan inline agar badge tidak melebar ke kanan */
+        .detail-badge {
+            display: inline-block !important;
+            width: fit-content;
+            padding: 6px 16px;
+            background: rgba(14, 165, 233, 0.1); /* Sky Blue / PLN Blue */
+            color: #0ea5e9;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Standarisasi titik window mockup */
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        .window-dots .dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* Tombol Aksi Khusus */
+        .btn-pln {
+            background: #0ea5e9 !important;
+            box-shadow: 0 10px 20px rgba(14, 165, 233, 0.2);
+        }
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="container detail-wrapper">
+
+        <!-- Navigation -->
+        <header class="detail-nav">
+            <a href="index.html#projects" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="breadcrumb">
+                Projects <i class="fa-solid fa-chevron-right" style="font-size:0.7rem; margin: 0 6px; color: var(--text-light);"></i> 
+                <span>PLN Invoice System</span>
+            </div>
+        </header>
+
+        <!-- Grid Konten (1.2fr 0.8fr) -->
+        <main class="detail-grid">
+
+            <!-- KIRI: Info Project -->
+            <div class="detail-content-left">
+                <div class="detail-badge">Backend Automation</div>
+
+                <h1 class="project-title-large">
+                    Monthly Invoice <span>Delivery System</span>
+                </h1>
+
+                <p class="project-long-desc">
+                    Developed for <strong>PT PLN (Persero) UP3 Gresik</strong>, this full-stack automation system is engineered to digitize the distribution of electricity bills. 
+                    Built using a custom <strong>PHP-MVC architecture</strong>, the platform manages customer records and automates the dispatch of PDF invoices via <strong>SMTP servers</strong>.
+                </p>
+
+                <!-- Stats Row -->
+                <div class="stats-row">
+                    <div class="stat-card-mini">
+                        <div class="s-icon" style="color: #0ea5e9;"><i class="fa-solid fa-envelope-circle-check"></i></div>
+                        <div class="s-info">
+                            <h4>SMTP</h4>
+                            <p>Engine</p>
+                        </div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="s-icon" style="color: #4f46e5;"><i class="fa-solid fa-layer-group"></i></div>
+                        <div class="s-info">
+                            <h4>MVC</h4>
+                            <p>Architecture</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="action-row">
+                    <button id="openVideoBtn" class="btn-primary-action btn-pln" style="border:none; cursor:pointer;">
+                        <i class="fa-solid fa-circle-play"></i> Watch Demo Video
+                    </button>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="tech-stack-section">
+                    <h3 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: var(--text-muted);">
+                        <i class="fa-solid fa-microchip"></i> Engineering Stack
+                    </h3>
+                    <div class="tech-pills-wrap">
+                        <span class="tech-tag">Native PHP</span>
+                        <span class="tech-tag">MySQL (ERD)</span>
+                        <span class="tech-tag">PHPMailer</span>
+                        <span class="tech-tag">SMTP Integration</span>
+                        <span class="tech-tag">Bootstrap 5</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANAN: Visual & Fitur -->
+            <div class="detail-content-right">
+
+                <!-- Window Mockup -->
+                <div class="window-mockup">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <!-- CSS Anda otomatis menghandle scroll pada hover (350px) -->
+                        <img src="images/pln web.png" alt="PLN Dashboard Preview" class="scroll-img">
+                    </div>
+                </div>
+
+                <!-- Features Highlight List -->
+                <div class="features-highlight-card">
+                    <h3>Core Functionalities</h3>
+                    <ul class="features-ul">
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Bulk SMTP Dispatch:</strong> Automated mass email delivery with PDF attachments.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Customer CRM:</strong> Centralized management of customer IDs and contact data.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Activity Auditing:</strong> Real-time logging of admin and staff actions for security.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Video Modal -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeVideoBtn">&times;</span>
+            <video id="plnVideo" controls controlsList="nodownload">
+                <source src="videos/web pln.mov" type="video/mp4">
+                Browser tidak mendukung pemutar video.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animasi masuk
+            const wrapper = document.querySelector('.detail-wrapper');
+            wrapper.style.opacity = '1';
+            wrapper.style.transform = 'translateY(0)';
+
+            // Modal Video Logic
+            const modal = document.getElementById("videoModal");
+            const btn = document.getElementById("openVideoBtn");
+            const closeBtn = document.getElementById("closeVideoBtn");
+            const video = document.getElementById("plnVideo");
+
+            btn.onclick = () => { 
+                modal.style.display = "flex"; 
+                video.play(); 
+            }
+
+            closeBtn.onclick = () => { 
+                modal.style.display = "none"; 
+                video.pause(); 
+            }
+
+            window.onclick = (e) => { 
+                if (e.target == modal) { 
+                    modal.style.display = "none"; 
+                    video.pause(); 
+                } 
+            }
+        });
+    </script>
+</body>
+</html>

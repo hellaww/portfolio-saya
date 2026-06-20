@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PLN Dashboard Detail | Hellawati Ayu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Perbaikan inline agar badge tidak melebar ke kanan */
+        .detail-badge {
+            display: inline-block !important;
+            width: fit-content;
+            padding: 6px 16px;
+            background: rgba(245, 158, 11, 0.1); /* Amber/PLN Yellow */
+            color: #d97706;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Standarisasi titik window mockup */
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        .window-dots .dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* Tombol Aksi Khusus Dashboard */
+        .btn-dashboard {
+            background: #d97706 !important;
+            box-shadow: 0 10px 20px rgba(217, 119, 6, 0.2);
+        }
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="container detail-wrapper">
+
+        <!-- Navigation -->
+        <header class="detail-nav">
+            <a href="index.html#projects" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="breadcrumb">
+                Projects <i class="fa-solid fa-chevron-right" style="font-size:0.7rem; margin: 0 6px; color: var(--text-light);"></i> 
+                <span>PLN Dashboard</span>
+            </div>
+        </header>
+
+        <!-- Grid Konten (1.2fr 0.8fr) -->
+        <main class="detail-grid">
+
+            <!-- KIRI: Info Project -->
+            <div class="detail-content-left">
+                <div class="detail-badge">Data Analytics</div>
+
+                <h1 class="project-title-large">
+                    Operational <span>Monitoring Dashboard</span>
+                </h1>
+
+                <p class="project-long-desc">
+                    Developed for <strong>PT PLN (Persero) UP3 Gresik</strong>, this integrated data ecosystem transforms fragmented operational data into actionable insights. By connecting <strong>PHP web inputs</strong> and <strong>Google Sheets</strong> to <strong>Looker Studio</strong>, this platform provides real-time monitoring of key performance indicators (KPIs).
+                </p>
+
+                <!-- Stats Row -->
+                <div class="stats-row">
+                    <div class="stat-card-mini">
+                        <div class="s-icon" style="color: #f59e0b;"><i class="fa-solid fa-chart-column"></i></div>
+                        <div class="s-info">
+                            <h4>Looker</h4>
+                            <p>Studio</p>
+                        </div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="s-icon" style="color: #10b981;"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                        <div class="s-info">
+                            <h4>Real-time</h4>
+                            <p>Tracking</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button -->
+                <div class="action-row">
+                    <a href="https://datastudio.google.com/reporting/d19f5609-8c39-4828-8210-f0176927875c" target="_blank" class="btn-primary-action btn-dashboard">
+                        <i class="fa-solid fa-chart-line"></i> View Live Dashboard
+                    </a>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="tech-stack-section">
+                    <h3 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: var(--text-muted);">
+                        <i class="fa-solid fa-database"></i> Analytics Stack
+                    </h3>
+                    <div class="tech-pills-wrap">
+                        <span class="tech-tag">Looker Studio</span>
+                        <span class="tech-tag">Google Sheets</span>
+                        <span class="tech-tag">PHP</span>
+                        <span class="tech-tag">Data Modeling</span>
+                        <span class="tech-tag">KPI Tracking</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANAN: Visual Mockup -->
+            <div class="detail-content-right">
+
+                <!-- Window Mockup -->
+                <div class="window-mockup">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <!-- CSS Anda otomatis menghandle scroll pada hover (350px) -->
+                        <img src="images/Dashboard NKO PLN UP3 Gresik.png" alt="PLN Dashboard Preview" class="scroll-img">
+                    </div>
+                </div>
+
+                <!-- Features Highlight List -->
+                <div class="features-highlight-card">
+                    <h3>Key Analytics Features</h3>
+                    <ul class="features-ul">
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Dynamic Filtering:</strong> Filter data by period, region, and unit dynamically.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Automated Refresh:</strong> Updates from connected internal Google sources.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Trend Analysis:</strong> Visual growth charts for monthly performance.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wrapper = document.querySelector('.detail-wrapper');
+            wrapper.style.opacity = '1';
+            wrapper.style.transform = 'translateY(0)';
+        });
+    </script>
+</body>
+</html>

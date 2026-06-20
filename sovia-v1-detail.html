@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SOVIA v1 Detail | Hellawati Ayu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Perbaikan inline agar badge tidak melebar ke kanan */
+        .detail-badge {
+            display: inline-block !important;
+            width: fit-content;
+            padding: 6px 16px;
+            background: rgba(116, 39, 116, 0.1); /* Power Platform Purple */
+            color: #742774;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+
+        /* Standarisasi titik window mockup */
+        .dot.red { background: #ff5f56; }
+        .dot.yellow { background: #ffbd2e; }
+        .dot.green { background: #27c93f; }
+        .window-dots .dot {
+            width: 10px; height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 5px;
+        }
+
+        /* Tombol Play Khusus */
+        .btn-play {
+            background: #742774 !important;
+            box-shadow: 0 10px 20px rgba(116, 39, 182, 0.2);
+        }
+    </style>
+</head>
+<body class="detail-body">
+
+    <div class="container detail-wrapper">
+
+        <!-- Navigation -->
+        <header class="detail-nav">
+            <a href="index.html#projects" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Back
+            </a>
+            <div class="breadcrumb">
+                Projects <i class="fa-solid fa-chevron-right" style="font-size:0.7rem; margin: 0 6px; color: var(--text-light);"></i> 
+                <span>SOVIA v1</span>
+            </div>
+        </header>
+
+        <!-- Grid Konten (1.2fr 0.8fr) -->
+        <main class="detail-grid">
+
+            <!-- KIRI: Info Project -->
+            <div class="detail-content-left">
+                <div class="detail-badge">Low-Code Automation</div>
+
+                <h1 class="project-title-large">
+                    SOVIA v1 <span>Automation Hub</span>
+                </h1>
+
+                <p class="project-long-desc">
+                    The foundation of SIG's scholarship digitalization. Built within the <strong>Microsoft 365 ecosystem</strong>, focusing on rapid deployment to transform manual scholarship applications into automated, secure digital workflows.
+                </p>
+
+                <!-- Stats Row -->
+                <div class="stats-row">
+                    <div class="stat-card-mini">
+                        <div class="s-icon" style="color: #742774;"><i class="fa-solid fa-bolt"></i></div>
+                        <div class="s-info">
+                            <h4>Rapid</h4>
+                            <p>Deployment</p>
+                        </div>
+                    </div>
+                    <div class="stat-card-mini">
+                        <div class="s-icon" style="color: #0078d4;"><i class="fa-solid fa-gears"></i></div>
+                        <div class="s-info">
+                            <h4>Auto</h4>
+                            <p>Workflows</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Action Button: Membuka Modal Video -->
+                <div class="action-row">
+                    <button id="openVideoBtn" class="btn-primary-action btn-play" style="border:none; cursor:pointer;">
+                        <i class="fa-solid fa-circle-play"></i> Watch Demo Video
+                    </button>
+                </div>
+
+                <!-- Tech Stack Section -->
+                <div class="tech-stack-section">
+                    <h3 style="font-size: 0.85rem; font-weight: 800; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 15px; color: var(--text-muted);">
+                        <i class="fa-solid fa-layer-group"></i> Power Platform
+                    </h3>
+                    <div class="tech-pills-wrap">
+                        <span class="tech-tag">Power Apps</span>
+                        <span class="tech-tag">Power Automate</span>
+                        <span class="tech-tag">SharePoint Online</span>
+                        <span class="tech-tag">M365 Security</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- KANAN: Visual & Fitur -->
+            <div class="detail-content-right">
+
+                <!-- Window Mockup -->
+                <div class="window-mockup">
+                    <div class="window-header">
+                        <div class="window-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                    </div>
+                    <div class="window-body">
+                        <!-- CSS Anda otomatis menghandle scroll pada hover -->
+                        <img src="images/project-power.jpeg" alt="SOVIA v1 Preview" class="scroll-img">
+                    </div>
+                </div>
+
+                <!-- Features Highlight List -->
+                <div class="features-highlight-card">
+                    <h3>Key Functionalities</h3>
+                    <ul class="features-ul">
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Rapid Digitization:</strong> Forms to digital canvas.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Automated Approvals:</strong> Power Automate flows.</span>
+                        </li>
+                        <li>
+                            <div class="dot-v"><i class="fa-solid fa-check"></i></div>
+                            <span><strong>Document Hub:</strong> Centralized SharePoint storage.</span>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </main>
+    </div>
+
+    <!-- Video Modal (Struktur sesuai CSS Anda) -->
+    <div id="videoModal" class="video-modal">
+        <div class="modal-content">
+            <span class="close-modal" id="closeVideoBtn">&times;</span>
+            <video id="soviaVideo" controls controlsList="nodownload">
+                <source src="videos/tutorial-sovia.mov" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Animasi masuk
+            const wrapper = document.querySelector('.detail-wrapper');
+            wrapper.style.opacity = '1';
+            wrapper.style.transform = 'translateY(0)';
+
+            // Modal Logic
+            const modal = document.getElementById("videoModal");
+            const btn = document.getElementById("openVideoBtn");
+            const closeBtn = document.getElementById("closeVideoBtn");
+            const video = document.getElementById("soviaVideo");
+
+            btn.onclick = () => { 
+                modal.style.display = "flex"; 
+                video.play(); 
+            }
+
+            closeBtn.onclick = () => { 
+                modal.style.display = "none"; 
+                video.pause(); 
+            }
+
+            window.onclick = (e) => { 
+                if (e.target == modal) { 
+                    modal.style.display = "none"; 
+                    video.pause(); 
+                } 
+            }
+        });
+    </script>
+</body>
+</html>

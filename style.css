@@ -1276,110 +1276,87 @@ footer {
     to { opacity: 1; transform: scale(1); }
 }
 
-/* --- RESPONSIVE FIXES --- */
-
-@media (max-width: 992px) {
-    .container { padding: 0 5%; }
-    
-    /* Hero Section */
-    .hero-grid {
-        grid-template-columns: 1fr; /* Jadi 1 kolom */
-        text-align: center;
-        gap: 40px;
-    }
-    .hero-left { order: 2; }
-    .hero-right { order: 1; }
-    .hero-actions-group {
-        flex-direction: column;
-        align-items: center;
-    }
-    .analysis-mockup { margin: 0 auto; max-width: 100%; }
-
-    /* About Section */
-    .about-wrapper {
-        flex-direction: column;
-        text-align: center;
-    }
-    .about-visual .circle-frame {
-        width: 200px;
-        height: 200px;
-        margin: 0 auto 30px;
-    }
-}
-
 @media (max-width: 768px) {
-    /* Navbar */
-    .nav-links { display: none; } /* Sembunyikan link biasa, atau buat menu hamburger */
-    .nav-container { justify-content: center; position: relative; }
-    .btn-nav { position: absolute; right: 20px; font-size: 12px; padding: 8px 15px; }
-
-    /* Titles */
-    .hero-title { font-size: 2.2rem; }
-    .showcase-title { font-size: 1.8rem; }
-
-    /* Achievements Grid (Kartu 06+, 09+, 04+) */
-    .achievements-grid {
-        grid-template-columns: 1fr; /* Stack ke bawah */
-        gap: 15px;
-    }
-
-    /* Tabs Navigation */
-    .showcase-tabs {
-        flex-wrap: nowrap;
-        overflow-x: auto; /* Bisa digeser ke samping */
-        justify-content: flex-start;
-        padding-bottom: 10px;
-        -webkit-overflow-scrolling: touch;
-    }
-    .tab-item { min-width: 120px; flex-shrink: 0; }
-
-    /* Projects Grid */
-    .projects-grid {
-        grid-template-columns: 1fr; /* Kartu project jadi full width */
-    }
-
-    /* Experience Section */
-    .exp-strategic-item {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .exp-left-meta {
-        flex-direction: row;
+    /* --- NAVBAR --- */
+    .nav-container {
+        padding: 15px 20px;
         justify-content: space-between;
+    }
+    .nav-links { display: none; } /* Sembunyikan menu link di HP */
+    .btn-nav {
+        padding: 8px 15px;
+        font-size: 13px;
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+        padding-top: 100px; /* Beri jarak agar tidak tertutup navbar */
+        padding-bottom: 50px;
+        overflow: hidden;
+    }
+    
+    .hero-grid {
+        display: flex;
+        flex-direction: column; /* Stack ke bawah */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-left {
+        order: 1; /* Teks muncul pertama (Sangat Penting) */
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        border-left: 3px solid var(--accent-color); /* Ganti garis bawah jadi garis samping */
-        padding-left: 15px;
+    }
+
+    .hero-right {
+        order: 2; /* Mockup muncul di bawah teks */
+        display: flex;
+        justify-content: center;
         width: 100%;
     }
-    .exp-right-card { padding-left: 0; }
-    
-    .exp-grid-gallery {
-        grid-template-columns: repeat(2, 1fr); /* Gambar gallery jadi 2 baris */
+
+    .hero-title {
+        font-size: 2rem;
+        line-height: 1.2;
+        margin-bottom: 15px;
     }
 
-    /* Contact Section */
-    .contact-wrapper-modern {
-        grid-template-columns: 1fr;
-        padding: 30px 20px;
+    .hero-subtitle {
+        font-size: 0.95rem;
+        max-width: 100%;
+        margin-bottom: 25px;
     }
-    .contact-method-card { margin-top: 30px; }
-    
-    /* Modal Gambar */
-    .modal-main-view img {
-        max-height: 70vh;
-        width: auto;
-    }
-}
 
-@media (max-width: 480px) {
-    .hero-title { font-size: 1.8rem; }
-    .tech-stack { justify-content: center; }
-    .tech-tag { font-size: 11px; padding: 5px 10px; }
-    
-    /* Footer */
-    .footer-wrap {
+    /* Tech Stack agar rapi di tengah */
+    .tech-stack {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .tech-tag {
+        font-size: 11px;
+        padding: 6px 12px;
+    }
+
+    /* Mockup Analisis dikecilkan sedikit agar tidak meluber */
+    .analysis-mockup {
+        transform: scale(0.85); 
+        margin: -20px 0; /* Mengurangi whitespace akibat scale */
+        max-width: 100%;
+    }
+
+    .hero-actions-group {
         flex-direction: column;
         gap: 20px;
-        text-align: center;
+        width: 100%;
+        align-items: center;
+    }
+
+    .social-group {
+        justify-content: center;
     }
 }

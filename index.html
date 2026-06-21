@@ -92,10 +92,33 @@
                 </div>
             </div>
             <div class="achievements-grid reveal">
-                <div class="achieve-card" onclick="location.href='#projects'"><div class="achieve-top"><div class="achieve-icon"><i class="fa-solid fa-diagram-project"></i></div><span class="achieve-val">06+</span></div><div class="achieve-info"><h4>SYSTEM PROJECTS</h4><p>Enterprise builds</p></div></div>
-                <div class="achieve-card" onclick="switchTab(event, 'certificates-content'); location.href='#projects'"><div class="achieve-top"><div class="achieve-icon"><i class="fa-solid fa-certificate"></i></div><span class="achieve-val">09+</span></div><div class="achieve-info"><h4>CERTIFICATIONS</h4><p>Skills validated</p></div></div>
-                <div class="achieve-card"><div class="achieve-top"><div class="achieve-icon"><i class="fa-solid fa-briefcase"></i></div><span class="achieve-val">04+</span></div><div class="achieve-info"><h4>PROFESSIONAL ROLES</h4><p>Industry roles</p></div></div>
-            </div>
+    <!-- Tambahkan switchTab di sini agar konten berubah kembali ke Projects -->
+    <div class="achieve-card" onclick="switchTab(event, 'projects-content'); location.href='#projects'">
+        <div class="achieve-top">
+            <div class="achieve-icon"><i class="fa-solid fa-diagram-project"></i></div>
+            <span class="achieve-val">06+</span>
+        </div>
+        <div class="achieve-info"><h4>SYSTEM PROJECTS</h4><p>Enterprise builds</p></div>
+    </div>
+
+    <!-- Sertifikat -->
+    <div class="achieve-card" onclick="switchTab(event, 'certificates-content'); location.href='#projects'">
+        <div class="achieve-top">
+            <div class="achieve-icon"><i class="fa-solid fa-certificate"></i></div>
+            <span class="achieve-val">09+</span>
+        </div>
+        <div class="achieve-info"><h4>CERTIFICATIONS</h4><p>Skills validated</p></div>
+    </div>
+
+    <!-- Professional Roles -->
+    <div class="achieve-card" onclick="switchTab(event, 'experience-content'); location.href='#projects'">
+        <div class="achieve-top">
+            <div class="achieve-icon"><i class="fa-solid fa-briefcase"></i></div>
+            <span class="achieve-val">04+</span>
+        </div>
+        <div class="achieve-info"><h4>PROFESSIONAL ROLES</h4><p>Industry roles</p></div>
+    </div>
+</div>
         </div>
     </section>
 
@@ -288,21 +311,40 @@
             <div id="experience-content" class="tab-content">
                 <div class="exp-strategic-wrapper">
                     <!-- Exp 1 -->
-                    <div class="exp-strategic-item">
-                        <div class="exp-left-meta"><span class="exp-year-tag">2024 — 2026</span><div class="exp-status-pill">Chief Role</div></div>
-                        <div class="exp-right-card">
-                            <h3 class="exp-title-main">Chief Marketing Officer</h3>
-                            <p class="exp-subtitle-sub">Aerare Parfume · Strategic Marketing</p>
-                            <p class="exp-desc-p">Orchestrating end-to-end marketing ecosystems and promotional synergy.</p>
-                            <div class="exp-grid-gallery">
-                                <div class="grid-img-wrap" onclick="openCertModal(this)"><img src="images/aerare 1.jpeg"></div>
-                                <div class="grid-img-wrap" onclick="openCertModal(this)"><img src="images/aerare 2.jpeg"></div>
-                                <div class="grid-img-wrap exp-hidden" onclick="openCertModal(this)"><img src="images/aerare 3.jpeg"></div>
-                                <div class="grid-img-wrap exp-hidden" onclick="openCertModal(this)"><img src="images/aerare 4.jpeg"></div>
-                                <div class="grid-more-link" onclick="event.stopPropagation(); toggleExpGallery(this)"><span class="more-label">+ 2 More</span></div>
-                            </div>
-                        </div>
-                    </div>
+<div class="exp-strategic-item">
+    <div class="exp-left-meta">
+        <!-- Update periode sesuai LinkedIn -->
+        <span class="exp-year-tag">Oct 2024 — Jan 2026</span>
+        <div class="exp-status-pill">Chief Role</div>
+    </div>
+    <div class="exp-right-card">
+        <h3 class="exp-title-main">Chief Marketing Officer</h3>
+        <p class="exp-subtitle-sub">Aerare Parfume · Part-time (Remote)</p>
+        
+        <!-- Deskripsi yang ditingkatkan dari LinkedIn Anda -->
+        <p class="exp-desc-p">
+            Spearheaded <strong>integrated marketing strategies</strong> to effectively scale consumer reach. 
+            Engineered creative promotional campaigns across <strong>omni-channel platforms</strong>, 
+            including social media and e-commerce ecosystems. Responsible for orchestrating brand 
+            positioning to ensure long-term market relevance and a strong brand identity.
+        </p>
+        
+        <div class="exp-grid-gallery">
+            <div class="grid-img-wrap" onclick="openCertModal(this)">
+                <img src="images/aerare 1.jpeg" alt="Marketing Strategy">
+            </div>
+            <div class="grid-img-wrap" onclick="openCertModal(this)">
+                <img src="images/aerare 2.jpeg" alt="E-commerce Campaign">
+            </div>
+            <div class="grid-img-wrap" onclick="openCertModal(this)">
+                <img src="images/aerare 3.jpeg" alt="Social Media Branding">
+            </div>
+            <div class="grid-img-wrap" onclick="openCertModal(this)">
+                <img src="images/aerare 4.jpeg" alt="Brand Identity Analysis">
+            </div>
+        </div>
+    </div>
+</div>
                     <!-- Exp 2: PT PLN (Persero) -->
                     <div class="exp-strategic-item reveal">
                         <div class="exp-left-meta">
@@ -576,24 +618,28 @@ function switchTab(event, tabId) {
     const contents = document.querySelectorAll('.tab-content');
     contents.forEach(content => {
         content.classList.remove('active');
-        content.style.display = 'none'; // Paksa sembunyi
+        content.style.display = 'none';
     });
 
-    // 2. Hilangkan status active di semua tombol tab
+    // 2. Hilangkan status active di semua tombol tab (tab-item)
     const tabs = document.querySelectorAll('.tab-item');
     tabs.forEach(tab => {
         tab.classList.remove('active');
     });
 
-    // 3. Tampilkan ID yang dituju
+    // 3. Tampilkan konten yang dituju
     const target = document.getElementById(tabId);
     if (target) {
         target.classList.add('active');
-        target.style.display = 'block'; // Paksa tampil
+        target.style.display = 'block';
     }
 
-    // 4. Aktifkan tombol yang diklik
-    event.currentTarget.classList.add('active');
+    // 4. Cari tombol tab yang sesuai dengan tabId dan beri class active
+    // Ini agar saat klik kartu di atas, tombol navigasi di bawahnya ikut berubah
+    const targetTab = document.querySelector(`.tab-item[onclick*="${tabId}"]`);
+    if (targetTab) {
+        targetTab.classList.add('active');
+    }
 }
 // --- 4. SEE MORE PROJECTS (MEMPERBAIKI ERROR UPAH TIDAK MUNCUL) ---
 let pExpanded = false;
@@ -615,7 +661,7 @@ function toggleCertificates() {
     hiddenCerts.forEach(c => c.classList.toggle('show-all', cExpanded));
     
     document.getElementById('certSeeMoreLabel').textContent = cExpanded ? 'Show Less' : 'View All Certificates';
-    document.querySelector('#certificates-content .cards-counter').textContent = `Showing ${cExpanded ? 9 : 3} of 12 certificates`;
+    document.querySelector('#certificates-content .cards-counter').textContent = `Showing ${cExpanded ? 12 : 3} of 12 certificates`;
 }
 
 // --- 6. MODAL SLIDER LOGIC ---
